@@ -1,0 +1,3 @@
+class PremiumDomain < Domain
+	
+end

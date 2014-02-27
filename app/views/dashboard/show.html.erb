@@ -1,0 +1,77 @@
+<div class = "row">
+	<div class="col-md-5 col-md-offset-1">
+		<div class="panel panel-info">
+		  <div class="panel-heading">
+		    <h2 class="panel-title">Premium Domains</h2>
+		  </div>
+		  <div class="panel-body">
+		  	<div class = "table-responsive">
+			    <table class="table">
+			        <thead>
+			          <tr>			        
+			            <th>Domain</th>
+			            <th>Asking</th>
+			            <th>Status</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          
+			          	<% if current_user.premium_domains.any? %>
+							<% current_user.premium_domains.each do |premium_domain| %>
+								<tr>
+									<td><% premium_domain.domain_name %></td>
+									<td><% premium_domain.asking_price %></td>
+									<td><% premium_domain.domain_status %></td>
+								</tr>	
+							<% end %>
+			          		
+			          	<% else %>
+			          		You do not have any premium domains!!!<br/>
+			          		<center><button class = "btn btn-sm btn-info">List Some</button></center>
+			          	<% end %>
+
+			        </tbody>
+		      	</table>
+	      	</div>
+		  </div>
+		</div>
+	</div>
+
+	<div class = "col-md-5">
+		<div class="panel panel-success">
+		  <div class="panel-heading">
+		    <h2 class="panel-title">Regular Domains</h2>
+		  </div>
+		  <div class="panel-body">
+		  	<div class = "table-responsive">
+			    <table class="table">
+			        <thead>
+			          <tr>			        
+			            <th>Domain</th>
+			            <th>Asking</th>
+			            <th>Status</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          
+			          	<% if current_user.regular_domains.any? %>
+							<% current_user.regular_domains.each do |regular_domain| %>
+								<tr>
+									<td><% regular_domain.domain_name %></td>
+									<td><% regular_domain.asking_price %></td>
+									<td><% regular_domain.domain_status %></td>
+								</tr>	
+							<% end %>
+			          		
+			          	<% else %>
+			          		You do not have any regular domains!!!<br/>
+			          		<center><button class = "btn btn-sm btn-success">List Some</button></center>
+			          	<% end %>
+			          	
+			        </tbody>
+		      	</table>
+	      	</div>
+		  </div>
+		</div>
+	</div>
+</div>

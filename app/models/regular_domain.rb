@@ -1,0 +1,3 @@
+class RegularDomain < Domain
+	
+end
