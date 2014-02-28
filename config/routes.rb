@@ -1,8 +1,9 @@
 Listed::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :users
-  #root :to => "home#index"
-  root :to => "dashboard#show"
+  root :to => "home#index"
+  resources :dashboard
+  #root :to => "dashboard#show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
