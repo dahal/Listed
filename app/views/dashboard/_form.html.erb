@@ -12,26 +12,22 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :domain %><br>
-    <%= f.text_field :domain, :class=>"form-control" %>
+    <%= f.label :domain_name %><br>
+    <%= f.text_field :domain_name, :class=>"form-control" %>
   </div>
   <div class="field form-group">
-    <%= f.label :price %><br>
-    <%= f.text_field :price , :class=>"form-control" %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, :class=>"form-control" %>
+    <%= f.label :askin_price %><br>
+    <%= f.text_field :asking_price , :class=>"form-control" %>
   </div>
   <div class="field form-group">
     <center><small>How would you like to list ?</small></center>
     <table class="table">
       <thead>
         <tr>
-          <th><%= f.check_box :premium %> Premium Domain<br/>
+          <th><%= f.check_box :premium_domain %> Premium Domain<br/>
             <small class = "text-muted">$ 2.99 / Month</small>
           </th>
-          <th><%= f.check_box :regular %> Regular Domain<br/>
+          <th><%= f.check_box :regular_domain %> Regular Domain<br/>
             <small class = "text-muted">99 cents / Month</small>
           </th>
         </tr>
